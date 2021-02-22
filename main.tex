@@ -1,42 +1,69 @@
-\documentclass[a4paper, twoside, titlepage]{tufte-handout}
-
-\input{pre-amble.tex}
+\documentclass[]{course-notes}
 
 \title{Design \& Make}
-
-\author{Dr\ Gopsill \& R.\ Valentine}
-\date{}
+\author[Gopsill \& Valentine]{\normalsize James Gopsill \& Rod Valentine}
 
 \begin{document}
 
-\input{frontmatter.tex}
+\maketitle
 
-\graphicspath{{Introduction/}}
-\input{Introduction/Introduction.tex}
+\begin{abstract}
+    The Design \& Make exercise introduces Engineering Design Process Models, Principles of Design \& Manufacture, and Project Management techniques. 
+    The lectures provides a overview of the techniques that are typically employed whilst the exercise provides an opportunity to put some of these techniques into practice as you design a product to meet a design brief. 
+    You will then manufacture and assemble your design in the 2nd year. This document contains the course notes that support the exercise and lectures.
+\end{abstract}
 
-\graphicspath{{EngineeringDesign/}}
-\input{EngineeringDesign/EngineeringDesign.tex}
+\clearpage
+\setcounter{tocdepth}{2}
+\tableofcontents
 
-\graphicspath{{DesignProcessModels/}}
-\input{DesignProcessModels/DesignProcessModels.tex}
+\clearpage
+\listoffigures
 
-\graphicspath{{ProductDesignSpecification/}}
-\input{ProductDesignSpecification/ProductDesignSpecification.tex}
+\clearpage
+\listoftables
 
-\graphicspath{{ConceptGeneration/}}
-\input{ConceptGeneration/ConceptGeneration.tex}
+\clearpage
+\section*{List of Acronyms}
+\begin{acronym}[TDMA]
+    \acro{BOM}{Bill of Materials}
+    \acro{CAD}{Computer Aided Design}
+    \acro{CNC}{Computer Numerically Controlled}
+    \acro{CPM}{Critical Path Methods}
+    \acro{DfA}{Design for Assembly}
+    \acro{DfM}{Design for Manufacture}
+    \acro{DfX}{Design for X}
+    \acro{DMLS}{Direct Metal Laser Sintering}
+    \acro{FDM}{Fused Deposition Modelling}
+    \acro{FFF}{Fused Filament Fabrication}
+    \acro{MCDA}{Multi-Criteria Decision Analysis}
+    \acro{NASA}{National Aeronautics and Space Administration}
+    \acro{PDS}{Product Design Specification}
+    \acro{PERT}{Project Evaluation and Review Techniques}
+    \acro{PLM}{Product Lifecycle Management}
+    \acro{SLM}{Selective Laser Melting}
+    \acro{SLS}{Selective Laser Sintering}
+    \acro{STL}{Stereolithography}
+    \acro{VDI2221}{Systematic Design Process Model}
+\end{acronym}
 
-\graphicspath{{ConceptSelection/}}
-\input{ConceptSelection/ConceptSelection.tex}
+\include{01_introduction/section}
 
-\graphicspath{{DesignForX/}}
-\input{DesignForX/DesignForX.tex}
+\include{02_engineering_design/section}
 
-\graphicspath{{ProjectManagementEssentials/}}
-\input{ProjectManagementEssentials/ProjectManagementEssentials.tex}
+\include{03_design_process_models/section}
 
+\include{04_product_design_specification/section}
 
-%\raggedright
+\include{05_concept_generation/section}
+
+\include{06_concept_selection/section}
+
+\include{07_design_for_x/section}
+
+\include{08_project_management_essentials/section}
+
+\RaggedRight
 \bibliography{citations}
 \bibliographystyle{plainnat}
 

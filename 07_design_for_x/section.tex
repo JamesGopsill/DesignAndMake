@@ -1,199 +1,143 @@
 \section{Design for X}
 
-\acf{DfX} concerns the development of guidelines and principles that support engineers in developing optimised products for a particular area. Examples include the Design for:
+\newthought{\acf{DfX}} concerns the development of guidelines and principles that support engineers in developing optimised products for a particular area. Examples include the Design for:
 
 \begin{multicols}{2}
-  \begin{itemize}
-    \item Additive (3D Printing)
-    \item Assembly
-    \item Environment
-    \item Disassembly
-    \item Manufacturing
-    \item Inspection
-    \item Safety
-    \item Service
-    \item Six Sigma
-  \end{itemize}
+    \begin{itemize}
+        \item Additive (3D Printing)
+        \item Assembly
+        \item Environment
+        \item Disassembly
+        \item Manufacturing
+        \item Inspection
+        \item Safety
+        \item Service
+        \item Six Sigma
+    \end{itemize}
 \end{multicols}
 
 
-It is not uncommon for a products design to go through a number of iterations where the engineering design team will focus on a particular \ac{DfX} element. Over the course of the design, compromises will have to be made to develop a product that meets all these requirements.
+It is not uncommon for a products design to go through a number of iterations where the engineering design team will focus on a particular \ac{DfX} element.
+Over the course of the design, compromises will have to be made to develop a product that meets all these requirements.
 
-In this exercise, we will focus on principles around \acf{DfA} and \acf{DfM}. Successful \ac{DfA} and \ac{DfM} activities will reduce the material, overhead and labour costs incurred when producing the product. Remember, 70-80\% of the committed cost is made at the design stage!\cite{ullman2002}\cite{corbett1986}\cite{mileham1993}
+In this exercise, we will focus on principles around \acf{DfA} and \acf{DfM}.
+Successful \ac{DfA} and \ac{DfM} activities will reduce the material, overhead and labour costs incurred when producing the product.
+Remember, 70-80\% of the committed cost is made at the design stage!\cite{ullman2002}\cite{corbett1986}\cite{mileham1993}
 
 \acf{DfA}\marginnote{Design for Assembly} covers the principles and techniques that support the development of a design that is easy to assemble. Significant reductions in cost and the number of parts required to produce a product can be achieved through using these techniques.
 
-Thus, \ac{DfA} is mainly concerned with minimising the number of assembly operations. This is often achieved by reducing the part count by combining part geometries together in order to increase their functionality. It is therefore common to see a decrease in parts and increase in part complexity after a \ac{DfA}  exercise is performed on a product. 
+Thus, \ac{DfA} is mainly concerned with minimising the number of assembly operations.
+This is often achieved by reducing the part count by combining part geometries together in order to increase their functionality.
+It is therefore common to see a decrease in parts and increase in part complexity after a \ac{DfA}  exercise is performed on a product. 
 
 \acf{DfM}\marginnote{Design for Manufacture} covers the principles and guidelines that support designers in selecting an appropriate manufacturing technique for a component and optimising a components geometry for a particular technique. Optimising a design for manufacture can greatly reduce manufacturing lead-times and production costs. 
 
 In this exercise, you will be using the tools available in the student workshops, rapid prototyping tools including laser cutting and 3D printing, and buying in standard components. The following sections will cover:
 
 \begin{itemize}
-  \item Design for (Manual) Assembly
-  \item Design for Manufacture (Laser Cutting)
-  \item Design for Manufacture (3D Printing)
+    \item Design for (Manual) Assembly
+    \item Design for Manufacture (Laser Cutting)
+    \item Design for Manufacture (3D Printing)
 \end{itemize}
 
-Although we are focusing on laser cutting and 3D printing technologies in these course notes. You should also be looking back at your student workshop experience and bring that knowledge to bear on the development of the manufacturing processes for your components. So remember to think about the use of:
+Although we are focusing on laser cutting and 3D printing technologies in these course notes.
+You should also be looking back at your student workshop experience and bring that knowledge to bear on the development of the manufacturing processes for your components.
+So remember to think about the use of:
 
 \begin{itemize}
-  \item Hand-tools;
-  \item Lathes;
-  \item Pillar drills; and,
-  \item CNC machining in your design.
+    \item Hand-tools;
+    \item Lathes;
+    \item Pillar drills; and,
+    \item CNC machining in your design.
 \end{itemize}
 
 \subsection{Design for (Manual) Assembly}
 
-Before\marginnote{Principles for DfA.\\\noindent\normalfont Acknowledgements to \citet{boothroyd2011} and Stienstra's Lecture on an ``Introduction to Design for (Cost Effective) Assembly and Manufacturing''.} one starts out on a DfA activity, there is a need to identify the aims and objectives of the activity to ensure that we can assess the output. For DfA, engineers often aim to:
+Before\marginnote{principles for DfA.\\\noindent\normalfont Acknowledgements to \citet{boothroyd2011} and Stienstra's Lecture on an ``Introduction to Design for (Cost Effective) Assembly and Manufacturing''.} one starts out on a DfA activity, there is a need to identify the aims and objectives of the activity to ensure that we can assess the output.
+For DfA, engineers often aim to:
 
 \begin{itemize}
-\item Minimise part count
-\item Design parts with self-locating features
-\item Design parts with self-fastening features
-\item Minimise the re-orientation of parts during assembly
-\item Design parts for retrieval, handling \& insertion
-%\item Emphasise the application of `top-down' assembleis
-\item Standardise parts and minimise the number of fasteners
-\item Encourage modularisation to enable parallel assembly
-\item Introduce symmetry to increase the number of orientations available for assembly
+    \item Minimise part count
+    \item Design parts with self-locating features
+    \item Design parts with self-fastening features
+    \item Minimise the re-orientation of parts during assembly
+    \item Design parts for retrieval, handling \& insertion
+    %\item Emphasise the application of `top-down' assembleis
+    \item Standardise parts and minimise the number of fasteners
+    \item Encourage modularisation to enable parallel assembly
+    \item Introduce symmetry to increase the number of orientations available for assembly
 \end{itemize}
 
 However, the aims and objectives may differ for your exercise so remember to look at the context of the design problem and see how these aims might help or hinder the progress of your design. In your case, remember that you're building a prototype of your design so you may want to ensure there is flexibility in the positioning of components in case some of your calculations have any errors as well as the manufacturing tolerances from techniques that will be employed.
 
-With\marginnote{The DfA Activity} the aims set, we can now proceed to assess the designs ability to be assembled. In the case of this exercise, we will follow a four step procedure:
+With\marginnote{the DfA activity} the aims set, we can now proceed to assess the designs ability to be assembled. In the case of this exercise, we will follow a four step procedure:
 
 \begin{description}
-  \item[Step 1] Functional analysis of the design
-  \item[Step 2] Estimating Assembly Time
-  \item[Step 3] Applying Design for Manual Assembly Guidelines
-  \item[Step 4] Compare the new design to the old design
+    \item[Step 1] Functional analysis of the design
+    \item[Step 2] Estimating Assembly Time
+    \item[Step 3] Applying Design for Manual Assembly Guidelines
+    \item[Step 4] Compare the new design to the old design
 \end{description}
-
 
 To\marginnote{Step One} start, we form a spreadsheet of all the parts in the current design and if possible, place them within their potential sub-assemblies. Once all the parts have been listed, we then determine the number of parts ($N_p$) and number of interfaces ($N_i$) these parts have with one another. 
 
-Now it is time to determine whether a part is essential to the designs function or not and this can be achieved by asking the questions outlined in the functional analysis chart (\cref{fig-functional}). 
+Now it is time to determine whether a part is essential to the designs function or not and this can be achieved by asking the questions outlined in the functional analysis chart \pref{fig-functional}. 
 
 \begin{figure*}[h!]
     \centering
-    \resizebox{\textwidth}{!}{
-    \begin{tikzpicture}%[scale=0.75, every node/.style={scale=0.75}]
-      \node[align=center, draw, text width=110] at (0,0) {Current Design};
-
-      \node[align=center, draw, text width=110] at (4.5,0) {Consider Specification};
-
-      \node[align=center, draw, text width=110] at (9,0) {Other Options};
-
-      \node[align=center, draw, text width=80, rotate=90] at (-3,-2) {Movement};
-
-      \node[align=center, draw, text width=80, rotate=90] at (-3,-5.5) {Isolation};
-
-      \node[align=center, draw, text width=80, rotate=90] at (-3.3,-9) {Adjustment or Replacement};
-
-      \node[align=center, draw, text width=110, minimum height=60] (A) at (0,-2) {Does the part move relative to all other parts already assembled?};
-
-      \node[align=center, draw, text width=110, minimum height=60] (B) at (4.5,-2) {Is the movement essential for the product to function};
-
-      \node[align=center, draw, text width=110, minimum height=60] (C) at (9,-2) {Is the part of a different material, or isolated from all other parts already assembled?};
-
-      \node[align=center, draw, text width=110, minimum height=60] (D) at (0,-5.5) {Is the part of a different material, or isolated from, all others parts already assembled?};
-
-      \node[align=center, draw, text width=110, minimum height=60] (E) at (4.5,-5.5) {Is a different material or isolation essential for the product to function?};
-
-      \node[align=center, draw, text width=110, minimum height=60] (F) at (9,-5.5) {Must the part be separate to satisfy the different material or isolation requirement?};
-
-      \node[align=center, draw, text width=110, minimum height=60] (G) at (0,-9) {Is the part separate to allow for its in-serve adjustment or replacement?};
-
-      \node[align=center, draw, text width=110, minimum height=60] (H) at (4.5,-9) {Is the adjustment or replacement essential?};
-
-      \node[align=center, draw, text width=110, minimum height=60] (I) at (9,-9) {Must the part be separate to enable the adjustment or replacement?};
-
-      \node[align=center, draw, text width=110] (J) at (0,-12) {Non-Essential Part};
-
-      \node[align=center, draw, text width=110] (K) at (12,-12) {Essential Part};
-
-      \draw[->] (A) -- (B) node[pos=0.5, anchor=south] {Y};
-      \draw[->] (B) -- (C) node[pos=0.5, anchor=south] {Y};
-
-      \draw[->] (D) -- (E) node[pos=0.5, anchor=south] {Y};
-      \draw[->] (E) -- (F) node[pos=0.5, anchor=south] {Y};
-
-      \draw[->] (G) -- (H) node[pos=0.5, anchor=south] {Y};
-      \draw[->] (H) -- (I) node[pos=0.5, anchor=south] {Y};
-
-      \draw[->] (H) -- (I) node[pos=0.5, anchor=south] {Y};
-
-      \draw[->] (C) -- (9,-3.75) -| (D) node[pos=0, anchor=south west] {N};
-      \draw[->] (B) -- (4.5,-3.75) node[pos=1, anchor=south west] {N};
-
-      \draw[->] (F) -- (9,-7.5) -| (G) node[pos=0, anchor=south west] {N};
-      \draw[->] (E) -- (4.5,-7.5) node[pos=1, anchor=south west] {N};
-
-      \draw[->] (I) -- (9,-11.25) -| (J) node[pos=0, anchor=south west] {N};
-      \draw[->] (H) -- (4.5,-11.25) node[pos=1, anchor=south west] {N};
-
-      \draw[->] (C) -| (K) node[pos=0, anchor=south west] {Y};
-      \draw[->] (F) -- (12,-5.5) node[pos=0, anchor=south west] {Y};
-      \draw[->] (I) -- (12,-9) node[pos=0, anchor=south west] {Y};
-
-    \end{tikzpicture}
-    }
+    \includestandalone[width=0.9\textwidth, mode=buildnew]{07_design_for_x/functional_analysis_chart}
     \vspace{1em}
     \caption{Functional Analysis Chart}\label{fig-functional}
 \end{figure*}
 
 Alongside this, we need to assess whether there are any components that can be further standardised within the products. The level of standardisation is not critical at the moment and could be at the assembly, full assembly, assembly plant, corporation or industry levels. Then there is the question as to whether the part should be standardised. A `Yes' should only be placed next to part if both these criteria are met.
 
-Having\marginnote{Part Count Efficiency $(\eta_{\text{part count}})$} calculated these values, we can begin to assess the performance of our current design. One metric that we use to assess a design is on it's part count efficiency. This is defined as the ratio between the theoretical number of parts required for the product to perform its function and actual number of parts within the design (\cref{equ-part-eff}).
+Having\marginnote{Part Count Efficiency $(\eta_{\text{part count}})$} calculated these values, we can begin to assess the performance of our current design. One metric that we use to assess a design is on it's part count efficiency. This is defined as the ratio between the theoretical number of parts required for the product to perform its function and actual number of parts within the design \pref{equ-part-eff}.
 
 \begin{equation}
-  \eta_{\text{part count}} = \frac{\sum{N_\text{essential}}}{\sum{N_p}}
-  \label{equ-part-eff}
+    \eta_{\text{part count}} = \frac{\sum{N_\text{essential}}}{\sum{N_p}}
+    \label{equ-part-eff}
 \end{equation}
-
 
 It is common that the designs following a DfA will have $\eta_{\text{part cout}}>0.6$ and this is the value that we will use as our objective.
 
 In\marginnote{DfA Complexity Factor} addition to part count efficiency, we have the \ac{DfA} complexity factor, which is based on the number of parts and interactions within the design. It is calculated as the square root of the number of parts multiplied by the number of interactions.
 
 \begin{equation}
-  \text{Complexity Factor} = \sqrt{\sum{N_p}\times\sum{N_i}}
+    \text{Complexity Factor} = \sqrt{\sum{N_p}\times\sum{N_i}}
 \end{equation} 
 
 
 The objective of \ac{DfA} is to reduce this value, which can be achieved by reducing both the number of parts and interactions within the product. \cref{tbl-parts} shows an example output of Step 1.
 
 \begin{table}[h!]
-  \centering
-  %\small
-  \includegraphics[width=0.3\textwidth]{figs/staple-remover.jpg} \\
-  \footnotesize
-  \begin{tabular}{l l r r c c}
-    \toprule
-      Part No. & Part Name & $N_p$ & $N_i$ & Essential &Standardised? \\
-    \midrule
-      1. & Lower Arm Sub-Assembly \\
-    \midrule
-      1.1 & Lower Arm & 1 & 6 & Y & N \\
-      1.2 & Lower Arm Cover & 1 & 3 & N & Y \\
-      1.3 & Rivet & 2 & 4 & N & N \\
-    \midrule
-      2. & Upper Arm Sub-Assembly & & \\
-    \midrule
-      2.1 & Upper Arm & 1 & 6 & N & N \\
-      2.2 & Upper Arm Cover & 1 & 3 & N & Y \\
-      2.3 & Rivet & 2 & 4 & N & N \\
-    \midrule
-      3. & Spring & 1 & 3 & N & N \\
-    \midrule
-      4. & Pivot & 1 & 3 & N & N \\
-    \midrule
-      Totals & & 10 & 32 & 1 & 2 \\
-    \bottomrule
-  \end{tabular}
-  \caption{Staple remover functional analysis}\label{tbl-parts}
+    \centering
+    \includegraphics[width=0.3\textwidth]{07_design_for_x/staple-remover.jpg} \\
+    \footnotesize
+    \begin{tabular}{l l r r c c}
+        \toprule
+          Part No. & Part Name & $N_p$ & $N_i$ & Essential &Standardised? \\
+        \midrule
+          1. & Lower Arm Sub-Assembly \\
+        \midrule
+          1.1 & Lower Arm & 1 & 6 & Y & N \\
+          1.2 & Lower Arm Cover & 1 & 3 & N & Y \\
+          1.3 & Rivet & 2 & 4 & N & N \\
+        \midrule
+          2. & Upper Arm Sub-Assembly & & \\
+        \midrule
+          2.1 & Upper Arm & 1 & 6 & N & N \\
+          2.2 & Upper Arm Cover & 1 & 3 & N & Y \\
+          2.3 & Rivet & 2 & 4 & N & N \\
+        \midrule
+          3. & Spring & 1 & 3 & N & N \\
+        \midrule
+          4. & Pivot & 1 & 3 & N & N \\
+        \midrule
+          Totals & & 10 & 32 & 1 & 2 \\
+        \bottomrule
+    \end{tabular}
+    \caption{Staple remover functional analysis}\label{tbl-parts}
 \end{table}
 
 
@@ -203,7 +147,7 @@ To help us with determining the assembly time of components, researchers have pe
 
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{figs/screwing.png}
+    \includegraphics[width=\textwidth]{07_design_for_x/screwing.png}
     \caption[Effect of number of threads on time to pick up the tool, engage the screw, tighten the screw, and replace the tool]{Effect of number of threads on time to pick up the tool, engage the screw, tighten the screw, and replace the tool~\citep{boothroyd2011}.}\label{fig-screw}
 \end{figure}
 
@@ -223,7 +167,7 @@ It\marginnote{Component Elimination} is a rule of thumb that if a third of the c
 
 \begin{figure*}[t!]
   \centering
-  \includegraphics[width=0.8\textwidth]{figs/simplification.png}
+  \includegraphics[width=0.8\textwidth]{07_design_for_x/simplification.png}
   \caption{Simplification of a sheet metal bracket}\label{fig-bracket}
 \end{figure*}
 
@@ -231,26 +175,26 @@ It\marginnote{Component Elimination} is a rule of thumb that if a third of the c
 Remember, eliminated parts never need to be:
 
 \begin{multicols}{3}
-  \begin{itemize}
-    \item Designed
-    \item Detailed
-    \item Prototyped
-    \item Produced
-    \item Scrapped
-    \item Tested
-    \item Re-engineered
-    \item Purchased
-    \item Progressed
-    \item Received
-    \item Inspected
-    \item Rejected
-    \item Stocked
-    \item Outdated
-    \item Written-off
-    \item Unreliable
-    \item Recycled
-    \item Late
-  \end{itemize}
+    \begin{itemize}
+        \item Designed
+        \item Detailed
+        \item Prototyped
+        \item Produced
+        \item Scrapped
+        \item Tested
+        \item Re-engineered
+        \item Purchased
+        \item Progressed
+        \item Received
+        \item Inspected
+        \item Rejected
+        \item Stocked
+        \item Outdated
+        \item Written-off
+        \item Unreliable
+        \item Recycled
+        \item Late
+    \end{itemize}
 \end{multicols}
 
 However\marginnote{Standard Sizes}, there are times when fasteners are required and the number cannot be reduced further. In these cases, it is worth checking whether the types of fastener (e.g.\ bolt size) can be reduced. It is much easier for a company to stock one type of bolt than it is a hundred and simplifies the assembly time as there is less chance the wrong bolt is selected to mate two parts.
@@ -260,62 +204,64 @@ Fasteners\marginnote{Fastener Cost} also have an inherent cost in terms of the t
 In\marginnote{Part Handling} general, for ease of part handling, a design engineer should attempt to:
 
 \begin{enumerate}
-  \item Design parts that have an end-to-end symmetry and rotational symmetry about the axis of insertion. If this cannot be achieved, try to design parts having the maximum possible symmetry (\cref{fig-handling}a).
-  \item Design parts that, in those instances where the part cannot be made symmetric, are obviously asymmetric (\cref{fig-handling}b).
-  \item Provide features that prevent jamming of parts that tend to nest or stack when stored in bulk (\cref{fig-handling}c).
-  \item Avoid features that allow tangling of parts when stored in bulk (\cref{fig-handling}d).
-  \item Avoid parts that stick together or are slippery, delicate, very small or very large, or that are hazardous to the handler (i.e.\ parts that are sharp, splinter easily, etc.)
+    \item Design parts that have an end-to-end symmetry and rotational symmetry about the axis of insertion. If this cannot be achieved, try to design parts having the maximum possible symmetry (\cref{fig-handling}a).
+    \item Design parts that, in those instances where the part cannot be made symmetric, are obviously asymmetric (\cref{fig-handling}b).
+    \item Provide features that prevent jamming of parts that tend to nest or stack when stored in bulk (\cref{fig-handling}c).
+    \item Avoid features that allow tangling of parts when stored in bulk (\cref{fig-handling}d).
+    \item Avoid parts that stick together or are slippery, delicate, very small or very large, or that are hazardous to the handler (i.e.\ parts that are sharp, splinter easily, etc.)
 \end{enumerate}
 
 \begin{figure}[t!]
-  \centering
-  \includegraphics[width=0.6\textwidth]{figs/handling.png}
-  \caption[Geometric features that effect part handling]{Geometric features that effect part handling~\citep{boothroyd2011}.}\label{fig-handling}
+    \centering
+    \includegraphics[width=0.6\textwidth]{07_design_for_x/handling.png}
+    \caption[Geometric features that effect part handling]{Geometric features that effect part handling~\citep{boothroyd2011}.}\label{fig-handling}
 \end{figure}
-
-
 
 \marginnote{Insertion and Fastening} For ease of insertion, an engineer should attempt to:
 
 \begin{enumerate}
-  \item Design so that there is little or no resistance to insertion and provide chamfers to guide the insertion of two mating parts. Generous clearance should be provided, but care must be taken to avoid clearances that result in a tendency for parts to jam or hang-up during insertion.
-  \item Standardize by using common parts, processes, and methods across all models and even across product lines to permit the use of higher volume processes that normally result in lower product cost.
-  \item Use pyramid assembly to provide progressive assembly about one axis of reference. In general, it is best to assemble from above.
-  \item Avoid, where possible, the necessity for holding parts down to maintain their orientation during manipulation of the sub-assembly or during the placement of another part. If holding down is required, then try to design so that the part is secured as soon as possible after it has been inserted.
-  \item Design so that a part is located before it is released. A potential source of problems arises from a part being placed where, due to design constraints, it must be released before it is positively located in the assembly. Under these circumstances, reliance is placed on the trajectory of the part being sufficiently repeatable to locate it consistently.
-  \item When common mechanical fasteners are used, the following sequence indicates the relative cost of different fastening processes, listed in the order of increasing manual assembly cost.
-  \begin{enumerate}
-    \item Snap fits
-    \item Plastic bending
-    \item Riveting
-    \item Screw fastening
-  \end{enumerate}
-  \item Avoid the need to reposition the partially completed assembly in the jig.
+    \item Design so that there is little or no resistance to insertion and provide chamfers to guide the insertion of two mating parts. Generous clearance should be provided, but care must be taken to avoid clearances that result in a tendency for parts to jam or hang-up during insertion.
+    \item Standardize by using common parts, processes, and methods across all models and even across product lines to permit the use of higher volume processes that normally result in lower product cost.
+    \item Use pyramid assembly to provide progressive assembly about one axis of reference. In general, it is best to assemble from above.
+    \item Avoid, where possible, the necessity for holding parts down to maintain their orientation during manipulation of the sub-assembly or during the placement of another part. If holding down is required, then try to design so that the part is secured as soon as possible after it has been inserted.
+    \item Design so that a part is located before it is released. A potential source of problems arises from a part being placed where, due to design constraints, it must be released before it is positively located in the assembly. Under these circumstances, reliance is placed on the trajectory of the part being sufficiently repeatable to locate it consistently.
+    \item When common mechanical fasteners are used, the following sequence indicates the relative cost of different fastening processes, listed in the order of increasing manual assembly cost.
+    \begin{enumerate}
+        \item Snap fits
+        \item Plastic bending
+        \item Riveting
+        \item Screw fastening
+    \end{enumerate}
+    \item Avoid the need to re-position the partially completed assembly in the jig.
 \end{enumerate}
 
 By\marginnote{Step Four} evaluating your designs with respect to these guidelines, new design should emerge that will ease the assembly of the product. To evaluate the relative success of the DfA activity, we now perform Steps 1 \& 2 again for the new design and compare it with the old version.
 
-To demonstrate the potential improvements that can be gained by performing this activity, \cref{fig-motor} illustrates the design changes that were made to a motor drive assembly. And, \cref{tbl-comparison} shows the comparison of the original motor design against the re-design motor assembly. The results show a:
+To demonstrate the potential improvements that can be gained by performing this activity, \cref{fig-motor} illustrates the design changes that were made to a motor drive assembly.
+And, \cref{tbl-comparison} shows the comparison of the original motor design against the re-design motor assembly.
+The results show a:
 
 \begin{itemize}
-  \item 68\% reduction in the number of parts required;
-  \item 70\% reduction in assembly time; and,
-  \item 71\% reduction in labour costs.
+    \item 68\% reduction in the number of parts required;
+    \item 70\% reduction in assembly time; and,
+    \item 71\% reduction in labour costs.
 \end{itemize}
 
 
 \begin{figure*}[ht!]
-    \centering
-    \begin{tabular}{c c}
-      \subfloat[Original design]{
-        \includegraphics[width=0.43\textwidth]{figs/motor-1.png}
-      } & 
-      \subfloat[Re-design]{
-        \includegraphics[width=0.43\textwidth]{figs/motor-2.png}
-      }
-    \end{tabular}
+
+    \hfill
+    \subfloat[Original design]{
+        \includegraphics[width=0.43\textwidth]{07_design_for_x/motor-1.png}
+    }
+    \hfill 
+    \subfloat[Re-design]{
+        \includegraphics[width=0.43\textwidth]{07_design_for_x/motor-2.png}
+    }
+    \hfill
+    
     \vspace{1em}
-  \caption{Motor drive assembly DfA re-design}\label{fig-motor}
+    \caption{Motor drive assembly DfA re-design}\label{fig-motor}
 \end{figure*}
 
 \begin{table*}[ht!]
@@ -376,13 +322,12 @@ Fast\marginnote{Today} forward to today and laser cutters have fully-established
 \cref{fig-cutter} shows a schematic of the laser cutting process. The laser originates from a laser resonator, which sends out a beam of intense light that is reflected through a system of mirrors to the cutting head. Within the cutting head, the laser is focused through a lens and narrowed down to an extremely thin, concentrated beam.
 
 \begin{figure}
-  \centering
-  \includegraphics[width=0.6\textwidth]{figs/laser-cutter.jpg}
-  \caption{Schematic of a laser cutter}\label{fig-cutter}
+    \centering
+    \includegraphics[width=0.6\textwidth]{07_design_for_x/laser-cutter.jpg}
+    \caption{Schematic of a laser cutter}\label{fig-cutter}
 \end{figure}
 
 Movement is often achieved though either a gantry system where a laser beam is placed perpendicularly to the materials and the beam is directed by three mirrors: one static and two mobile, or a galvanometer system.
-
 
 \subsubsection{Guidelines}
 
@@ -398,20 +343,18 @@ The\marginnote{Remember the Kerf when Making Assembly Slots} kerf can also effec
 
 There\marginnote{Engrave you Group Number and Part Id} will be a lot of parts being laser cut over the summer holidays and you'll have a number of parts that will look similar. Adding an engraving will help identify the parts when you come to build next year.
 
-
 \subsection{Design for Manufacture (3D Printing)}
 
 3D printing refers to processes in which material is joined or solidified under computer control to create a three-dimensional object. The term is often used interchangeably with Rapid Prototyping and Additive Manufacturing but we tend to use 3D Printing to describe low-cost additive manufacturing systems. And research at the University of Bath has been instrumental in creating low-cost 3D printing.
 
 \begin{marginfigure}
-  \centering
-  \includegraphics[width=\textwidth]{figs/mendel.jpg}
-  \caption{Mendel RepRap 3D Printer}
-  \label{fig-reprap}
+    \centering
+    \includegraphics[width=\textwidth]{07_design_for_x/mendel.jpg}
+    \caption{Mendel RepRap 3D Printer}
+    \label{fig-reprap}
 \end{marginfigure}
 
 The work by Dr Bowyer and his colleagues on the open-source RepRap project (\cref{fig-reprap}) has led to the technology that has been implemented in the majority of low-cost Fused Deposition Modelling (FDM) printers on the market today.~\cite{jones2011}
-
 
 \subsubsection{Types}
 
@@ -423,32 +366,32 @@ There are a number of different types of 3D printing but the most commonly used 
 
 The section now focuses on \ac{FDM} as this is the method that is available to you for your project.
 
-
 \subsubsection{Terminology}
 
 The\marginnote{Slicing} procedure of taking a \acf{CAD} model and producing the relevant code for the printer to print the model. Users often need to export their \ac{CAD} model as an \acf{STL} file and this is imported into the slicing tool. There are a range of slicing tools that are available and some of the most common are:
 
 \begin{itemize}
-  \item Cura
-  \item MakerWare
-  \item MatterControl
-  \item Repetier
-  \item Slic3r
+    \item Cura
+    \item MakerWare
+    \item MatterControl
+    \item Repetier
+    \item Slic3r
 \end{itemize}
 
-Research at the University of Bath is leading the development of slicing tools that optimise the internal geometry of printed parts based on the predicted loads through the part (Figure~\ref{fig-3d-print-bath})~\cite[-3em]{pam2017}.
+Research at the University of Bath is leading the development of slicing tools that optimise the internal geometry of printed parts based on the predicted loads through the part \pref{fig-3d-print-bath}~\cite[-3em]{pam2017}.
 
 \begin{figure*}
-    \center{}
-    \begin{tabular}{c c}
-      \subfloat[FEA]{
-        \includegraphics[width=0.45\textwidth]{figs/fea_three_point_beam.png}
-      }
-      &
-      \subfloat[Infill Design]{
-        \includegraphics[width=0.45\textwidth]{figs/three_point_beam.png}
-      }
-    \end{tabular}
+    
+    \hfill
+    \subfloat[FEA]{
+        \includegraphics[width=0.45\textwidth]{07_design_for_x/fea_three_point_beam.png}
+    }
+    \hfill
+    \subfloat[Infill Design]{
+        \includegraphics[width=0.45\textwidth]{07_design_for_x/three_point_beam.png}
+    }
+    \hfill
+    
     \vspace{1em}
     \caption{Optimised Lattice Infill for a Three-Point Bend Test}
     \label{fig-3d-print-bath}
@@ -468,62 +411,62 @@ Infill\marginnote{Infill} is the design of the internal geometry for the 3D prin
 
   \subfloat[Linear]
   {
-  \includegraphics[width=0.18\textwidth]{figs/makerbot_infill_strategy_square_linear.png}
+  \includegraphics[width=0.18\textwidth]{07_design_for_x/makerbot_infill_strategy_square_linear.png}
   \label{}
   }
   &
   \subfloat[Hexagonal]
   {
-  \includegraphics[width=0.18\textwidth]{figs/makerbot_infill_strategy_square_hexagonal.png}
+  \includegraphics[width=0.18\textwidth]{07_design_for_x/makerbot_infill_strategy_square_hexagonal.png}
   \label{}
   }
   &
   \subfloat[Moroccan Star]
   {
-  \includegraphics[width=0.18\textwidth]{figs/makerbot_infill_strategy_square_moroccanstar.png}
+  \includegraphics[width=0.18\textwidth]{07_design_for_x/makerbot_infill_strategy_square_moroccanstar.png}
   \label{}
   }
   &
   \subfloat[Catsfill]
   {
-  \includegraphics[width=0.18\textwidth]{figs/makerbot_infill_strategy_square_catfill.png}
+  \includegraphics[width=0.18\textwidth]{07_design_for_x/makerbot_infill_strategy_square_catfill.png}
   \label{}
   }
   &
   \subfloat[Sharkfill]
   {
-  \includegraphics[width=0.18\textwidth]{figs/makerbot_infill_strategy_square_sharkfill.png}
+  \includegraphics[width=0.18\textwidth]{07_design_for_x/makerbot_infill_strategy_square_sharkfill.png}
   \label{}
   }
   \\
 
   \subfloat[Line]
   {
-  \includegraphics[width=0.18\textwidth]{figs/slic3r_plate_line.png}
+  \includegraphics[width=0.18\textwidth]{07_design_for_x/slic3r_plate_line.png}
   \label{}
   }
   &
   \subfloat[Rectilinear]
   {
-  \includegraphics[width=0.18\textwidth]{figs/slic3r_plate_rectilinear.png}
+  \includegraphics[width=0.18\textwidth]{07_design_for_x/slic3r_plate_rectilinear.png}
   \label{}
   }
   &
   \subfloat[Concentric]
   {
-  \includegraphics[width=0.18\textwidth]{figs/slic3r_plate_concentric.png}
+  \includegraphics[width=0.18\textwidth]{07_design_for_x/slic3r_plate_concentric.png}
   \label{}
   }
   &
   \subfloat[Hilbert Curve]
   {
-  \includegraphics[width=0.18\textwidth]{figs/slic3r_plate_hilbertcurve.png}
+  \includegraphics[width=0.18\textwidth]{07_design_for_x/slic3r_plate_hilbertcurve.png}
   \label{}
   }
   &
   \subfloat[Archimedean Chords]
   {
-  \includegraphics[width=0.18\textwidth]{figs/slic3r_plate_archimedeanchords.png}
+  \includegraphics[width=0.18\textwidth]{07_design_for_x/slic3r_plate_archimedeanchords.png}
   \label{}
   }
   \\
@@ -550,21 +493,22 @@ The\marginnote{G-Code} language used to communicate motor movements and depositi
 Slicing is the process of generating the GCode for a 3D Model. In this section, we will go through the process of slicing a simple rectangular block where we do not have to consider the addition of rafts and supports. Although you will be using a slicing program to automatically do this, it is good to know what is going one behind the scenes. You never know when you may want to generate your own custom GCode for a 3D printer to use. The main steps are:
 
 \begin{enumerate}
-  \item Identifying the perimeter geometry
-  \item Creating shells
-  \item Creating the internal linear mesh
-  \item Determining the printer travel path
-  \item Creating the GCode printer file
+    \item Identifying the perimeter geometry
+    \item Creating shells
+    \item Creating the internal linear mesh
+    \item Determining the printer travel path
+    \item Creating the GCode printer file
 \end{enumerate}
 
 \begin{figure}[h!]
-  \centering
-  \includegraphics[width=0.7\textwidth]{figs/beam_stl.png}
-  \caption{Rectangular block to be sliced}\label{fig-block}
+    \centering
+    \includegraphics[width=0.7\textwidth]{07_design_for_x/beam_stl.png}
+    \caption{Rectangular block to be sliced}\label{fig-block}
 \end{figure}
 
 
-We\marginnote{Perimeter Identification} will now go through the procedure for one slice of the rectangular block (\cref{fig-block}). The first step is to identify for the perimeter on the plane at which we wish to slice. To achieve this, a slicing plane is generated and the intersections between the plane and the \ac{STL} model are identified (\cref{fig-intersection}). A set of lines is then generated from where the plane intersects the individual polygons of the \ac{STL} file. It is then the case of identifying the connecting path between the lines. This is achieved by taking a single line and identifying the neighbouring line by finding the end points that match. The process then continues to the end of the next line and repeats until the sequences of lines returns to the starting line. This forms a perimeter polygon for the part. There is then a check to see whether any lines remain that do not form part of the chain. If so, a new chain is generated with the remaining lines. This cycle repeats until all the lines are associated to a chain. This enables the identification of complex geometry with multiple perimeters such as a part containing holes and/or cut-outs.
+We\marginnote{Perimeter Identification} will now go through the procedure for one slice of the rectangular block (\cref{fig-block}). The first step is to identify for the perimeter on the plane at which we wish to slice. To achieve this, a slicing plane is generated and the intersections between the plane and the \ac{STL} model are identified \pref{fig-intersection}.
+A set of lines is then generated from where the plane intersects the individual polygons of the \ac{STL} file. It is then the case of identifying the connecting path between the lines. This is achieved by taking a single line and identifying the neighbouring line by finding the end points that match. The process then continues to the end of the next line and repeats until the sequences of lines returns to the starting line. This forms a perimeter polygon for the part. There is then a check to see whether any lines remain that do not form part of the chain. If so, a new chain is generated with the remaining lines. This cycle repeats until all the lines are associated to a chain. This enables the identification of complex geometry with multiple perimeters such as a part containing holes and/or cut-outs.
 
 \begin{figure}[h!]
   \center
